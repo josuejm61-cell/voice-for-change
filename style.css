@@ -1,14 +1,23 @@
+:root {
+    --green: #1f5a4a;
+    --gold: #d4af37;
+    --cream: #f5e6c8;
+    --rust: #8b3a2e;
+    --dark: #222;
+}
+
+/* Main page */
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #d4af37;
-    color: #222;
+    background-color: var(--cream);
+    color: var(--dark);
     line-height: 1.6;
 }
 
 /* Header */
 header {
-    background-color: #1f3c5b;
+    background-color: var(--green);
     color: white;
     padding: 25px;
     text-align: center;
@@ -30,10 +39,28 @@ nav a {
     text-decoration: none;
     margin: 0 15px;
     font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Animated underline */
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: var(--gold);
+    transition: width 0.3s ease;
 }
 
 nav a:hover {
-    text-decoration: underline;
+    color: var(--gold);
+}
+
+nav a:hover::after {
+    width: 100%;
 }
 
 /* Main content */
@@ -45,10 +72,10 @@ main {
     border-radius: 8px;
 }
 
-/* Section headings */
+/* Headings */
 h2 {
-    color: #1f3c5b;
-    border-bottom: 2px solid #ddd;
+    color: var(--green);
+    border-bottom: 3px solid var(--gold);
     padding-bottom: 5px;
 }
 
@@ -57,33 +84,18 @@ p {
     font-size: 1.05rem;
 }
 
-/* Links inside main content */
+/* Main links */
 main a {
-    color: #1f3c5b;
+    color: var(--rust);
+    font-weight: bold;
 }
 
 main a:hover {
+    color: var(--green);
     text-decoration: none;
 }
 
-/* Mobile design */
-@media (max-width: 600px) {
-    header h1 {
-        font-size: 2rem;
-    }
-
-    nav a {
-        display: block;
-        margin: 10px 0;
-    }
-
-    main {
-        margin: 15px;
-        padding: 20px;
-    }
-}
 /* Gallery */
-
 .gallery-section {
     margin-top: 40px;
 }
@@ -100,12 +112,19 @@ main a:hover {
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
+
+    background-color: var(--rust);
+    color: white;
+
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
 }
 
 .filter-btn:hover,
 .filter-btn.active {
-    background-color: #1f3c5b;
+    background-color: var(--green);
     color: white;
+    transform: translateY(-2px);
 }
 
 .gallery {
@@ -114,32 +133,66 @@ main a:hover {
     gap: 15px;
 }
 
+.gallery-item {
+    text-align: center;
+}
+
 .gallery-item img {
     width: 100%;
     height: 220px;
     object-fit: cover;
     border-radius: 8px;
+    cursor: pointer;
+
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.03);
+}
+
+.gallery-item h3 {
+    color: var(--green);
 }
 
 .gallery-item.hide {
     display: none;
 }
 
-
-/* Theme toggle button */
-
+/* Theme toggle */
 #theme-toggle {
     margin-top: 15px;
     padding: 10px 18px;
+
+    background-color: var(--gold);
+    color: var(--dark);
+
     border: none;
     border-radius: 5px;
+
     cursor: pointer;
     font-weight: bold;
+
+    transition: background-color 0.3s ease;
 }
 
+#theme-toggle:hover {
+    background-color: var(--rust);
+    color: white;
+}
 
-/* Alternate color scheme */
+/* Individual organization page image */
+.feature-image {
+    display: block;
+    width: 100%;
+    max-width: 700px;
+    height: auto;
 
+    margin: 20px auto;
+    border-radius: 8px;
+}
+
+/* Dark theme */
 body.dark-theme {
     background-color: #1c1c1c;
     color: white;
@@ -154,56 +207,38 @@ body.dark-theme header {
     background-color: #111;
 }
 
-body.dark-theme h2 {
-    color: #d4af37;
-    border-bottom-color: #666;
+body.dark-theme h2,
+body.dark-theme .gallery-item h3 {
+    color: var(--gold);
+    border-bottom-color: var(--rust);
 }
 
 body.dark-theme nav a {
-    color: #d4af37;
+    color: var(--gold);
 }
 
+body.dark-theme main a {
+    color: var(--gold);
+}
 
-/* Mobile gallery */
-
+/* Mobile design */
 @media (max-width: 600px) {
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    main {
+        margin: 15px;
+        padding: 20px;
+    }
+
     .gallery {
         grid-template-columns: 1fr;
     }
-}
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
-    position: relative;
-    transition: color 0.3s ease;
-}
-
-nav a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    width: 0;
-    height: 2px;
-    background-color: #d4af37;
-    transition: width 0.3s ease;
-}
-
-nav a:hover {
-    color: #d4af37;
-}
-
-nav a:hover::after {
-    width: 100%;
-}
-
-.feature-image {
-    display: block;
-    width: 100%;
-    max-width: 700px;
-    height: auto;
-    margin: 20px auto;
-    border-radius: 8px;
 }
