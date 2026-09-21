@@ -14,7 +14,9 @@ The purpose of Voice for Change is to encourage people to learn more about
 issues that affect their communities and understand that even small actions
 can make a difference. The website is meant to provide information, resources,
 and ideas that can help people become more involved and use their voice to
-support positive change.
+support positive change. I created a page as a helpful guide as I would want 
+to infor myself how to make a change in my community. 
+
 
 ## What tools did I use?
 
