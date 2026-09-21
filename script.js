@@ -36,3 +36,64 @@ if (themeToggle) {
         document.body.classList.toggle("dark-theme");
     });
 }
+// English / Spanish Language Toggle
+
+const languageToggle = document.getElementById("language-toggle");
+
+function changeLanguage(language) {
+
+    const translatedElements =
+        document.querySelectorAll("[data-en][data-es]");
+
+    translatedElements.forEach(element => {
+
+        if (language === "es") {
+            element.textContent = element.getAttribute("data-es");
+        } else {
+            element.textContent = element.getAttribute("data-en");
+        }
+
+    });
+
+    if (languageToggle) {
+
+        if (language === "es") {
+            languageToggle.textContent = "English";
+        } else {
+            languageToggle.textContent = "Español";
+        }
+
+    }
+
+    document.documentElement.lang = language;
+
+    localStorage.setItem("siteLanguage", language);
+}
+
+
+// Remember language between pages
+
+const savedLanguage =
+    localStorage.getItem("siteLanguage") || "en";
+
+changeLanguage(savedLanguage);
+
+
+// Switch language when button is clicked
+
+if (languageToggle) {
+
+    languageToggle.addEventListener("click", () => {
+
+        const currentLanguage =
+            localStorage.getItem("siteLanguage") || "en";
+
+        if (currentLanguage === "en") {
+            changeLanguage("es");
+        } else {
+            changeLanguage("en");
+        }
+
+    });
+
+}
