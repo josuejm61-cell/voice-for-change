@@ -292,3 +292,10 @@ body.dark-theme main a {
     color: white;
     transform: translateY(-2px);
 }
+/* Voice for Change tagline */
+
+.tagline {
+    margin: 8px 0 0;
+    font-size: 1.1rem;
+    font-style: italic;
+}
