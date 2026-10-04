@@ -2,35 +2,60 @@
 
 ## What is this?
 
-Voice for Change is a website created to bring attention to important issues
-and show people how they can make a difference in their community. The site
-includes information about the purpose of the project, an About page, and
-interactive features such as a filterable photo gallery and a color scheme
-toggle.
+Voice for Change is a website that helps bring attention to organizations
+and resources that make a difference in the community. The website highlights
+local organizations and gives visitors information about what they do and
+different ways people can help.
+
+The site includes a filterable organization gallery, individual pages for
+organizations, a color scheme toggle, and an English and Spanish language
+option.
 
 ## Why does it exist?
 
-The purpose of Voice for Change is to encourage people to learn more about
-issues that affect their communities and understand that even small actions
-can make a difference. The website is meant to provide information, resources,
-and ideas that can help people become more involved and use their voice to
-support positive change. I created a page as a helpful guide as I would want 
-to infor myself how to make a change in my community. 
+I created Voice for Change because I wanted to make it easier for people to
+learn about organizations that are helping others in the community.
 
+Sometimes people want to volunteer, donate, or help but may not know where
+to start. This website gives visitors a simple place to learn about different
+organizations and find ways they can get involved.
 
 ## What tools did I use?
 
-I used HTML to create the structure and content of the website, CSS to design
-the layout and color scheme, and JavaScript to add interactive features such
-as the photo gallery filters and color scheme toggle.
+I used HTML to build the pages and organize the content. I used CSS to create
+the colors, layout, gallery, mobile design, and other visual parts of the
+website.
 
-I used Visual Studio Code to create and edit the project files. I used GitHub
-to store and manage the project, and GitHub Pages to deploy the website online.
-I also used ChatGPT to help with ideas, troubleshooting, and improving some of
-the HTML, CSS, and JavaScript.
+I used JavaScript for the interactive features, including the gallery filters,
+color scheme toggle, and English/Spanish language option.
 
-## How to visit it
+I used Visual Studio Code to create and edit the project. GitHub was used to
+store and manage my files, and GitHub Pages was used to publish the website
+online.
 
-The deployed website can be visited here:
+I also used ChatGPT to help troubleshoot problems, understand code, and come
+up with ideas for improving the project.
+
+## How to access it
+
+The live website can be viewed here:
 
 https://josuejm61-cell.github.io/voice-for-change/
+
+## What changed from Project 01 to Project 02?
+
+Project 01 gave me the basic structure of Voice for Change, including the
+homepage, About page, basic navigation, styling, and the beginning of the
+organization gallery.
+
+For Project 02, I focused more on making the website useful and interactive.
+I added individual pages for the organizations so visitors can click on an
+image and learn more instead of only seeing it in the gallery.
+
+I also added an English and Spanish language option to make the website more
+accessible. I improved the organization gallery, added information about ways
+people can help, cleaned up the design, and worked on making the website look
+better on smaller screens.
+
+Overall, Project 02 feels much more complete and closer to the original goal
+of creating a website that helps people find ways to make a difference.
